@@ -1,0 +1,115 @@
+Jorge A. Raad
+PLAN.txt
+___________________________________________________________________________________________________
+
+After looking at the different variants of Breakout, one thing I noticed that every game
+implemented is that depending the speed and direction in at which the paddle hits the ball and the
+location at which the paddle is hit, the angle at which the ball bounces off changes. This makes
+skill more important for the game since the player now has the ability to decide the optimal
+direction to aim the ball in. If the paddle simply reverses the angle of the ball, then the only
+thing the player has to worry about is that the paddle is in position in time to hit the ball.
+
+One thing that caught my attention is how in "Centipong", the screen would display "Now drop the
+pods" after the level was cleared. It's not clear if touching a pod in this state will harm the
+player or just prolong the game, but it gave me the idea of having the bouncers enter a state in
+which it would harm the player to touch them.
+___________________________________________________________________________________________________
+
+LEVELS
+Level 1 - The first level will be very easy. The blocks will be placed all together towards the top
+of the screen. Every type of power-up will be present to introduce their effects. It will look
+something like this:
+_____________
+|oooooooooooo|
+|oooooooooooo|
+|oooooooooooo|
+|            |
+|            |
+|            |
+|            |
+|            |
+|            |
+_____________
+
+Level 2 - The bouncers speed up. The second level will have a few blocks in the way, closer to
+the paddle. This level will also introduce the poison block. More of the blocks will need to be
+hit multiples times to be broken.
+
+_____________
+|oooooooooooo|
+|oooooooooooo|
+|oooooooooooo|
+|            |
+|            |
+| o   o   o  |
+|            |
+|   o   o    |
+|            |
+_____________
+
+Level 3 - The bouncers speed up again. The final level will have several of the strongest blocks
+placed very close to the paddle. There will also be multiple poison blocks. Every level ends with
+the remaining bouncers entering poison mode, but for the last level, the player will have to
+survive for twice as long.
+_____________
+|oooooooooooo|
+|oooooooooooo|
+|oooooooooooo|
+|            |
+|            |
+| o o o o o  |
+| o o o o o  |
+|o o o o o o |
+|            |
+_____________
+___________________________________________________________________________________________________
+
+TYPES OF BLOCKS
+I would create three different blocks that need to be hit either 1, 2, or 3 times to be broken. I
+would need to implement a visual aid that indicates how close the blocks are to breaking (such as
+cracks).
+
+Another block I could create is an "explosive" block which a player would be hesitant to break.
+When this block is hit, it launches the ball back at double speed. Once the ball hits something,
+it would return to normal speed.
+
+Another block I will create, the "poison" block, will cause all the bouncers to change color and
+become deadly. The bouncers will not fall off the screen in this mode. They will return to normal
+after a few seconds. This will make players second-guess hitting the ball-multiplier power-up if
+this block is still in play.
+
+Another block will drop an item that will cause the paddle to freeze for a few seconds.
+___________________________________________________________________________________________________
+
+TYPES OF POWER-UPS
+* Extra life - gives you an extra life when touched
+* Slow Motion - slows down the ball for a few seconds
+* Ball Multiplier - creates 5 extra balls
+___________________________________________________________________________________________________
+
+CHEAT KEYS
+1 - starts up level 1
+2 - starts up level 2
+3 - starts up level 3
+A - gives an additional life
+S - prevents bouncers from falling off the screen
+
+___________________________________________________________________________________________________
+
+EXTRA FEATURES
+* Ability to switch the ball's appearance. I think that allowing the player to customize the game
+makes it more fun to play. This way, players will be able to clear the levels in style.
+
+* Poison Mode - whether triggered by a block or at the end of the level, when the bouncers are in
+this mode, they will take a life from the player and will not fall off the screen. I think this is
+creative and also fun because of how unexpected it is. It can also make losing more painful (and
+conversely, winning more rewarding) because after spending time beating the whole level, the player
+is confronted with an unexpected and difficult final stage they must clear before moving on.
+Eliminating all the blocks just to be taken out by this final stage can be very frustrating.
+
+* Hot Streak - If the paddle is hit in the middle a certain number of times in a row, the ball
+becomes stuck to the paddle, giving the player a few seconds to readjust the paddle. After a few
+seconds, the ball will bounce directly upwards from the paddle. This streak also adds points to your
+score. This gives players a clear way to beat their high scores when playing through the game again.
+It also gives players another objective to focus on within the game. These streaks give players
+another way to beat their high scores and can also be very satisfying.
